@@ -44,4 +44,34 @@ SPL Queries Used
   ->[index=main sourcetype=csv Message=" "](https://github.com/snehakdi/splunk-windows-log-portfolio/blob/main/screenshots/Filtering%20IV.png) (displays all events whose Message is " ") 
 
   ->Visual representation of errors,warnings,information using [Pie chart](https://github.com/snehakdi/splunk-windows-log-portfolio/blob/main/screenshots/Visual%20representation.png)
+
+
+  LOGON BEHAVIOUR ANALYSIS USING SECURITY LOGS
+ [ index=main EventID=4624 | stats count by LogonType](https://github.com/snehakdi/splunk-windows-log-portfolio/blob/main/screenshots/Security.png)
+
+ LogonType 2 (Interactive): Local user logins via keyboard and screen
+
+LogonType 7 (Unlock): Users unlocking existing sessions
+
+LogonType 5 (Service): Windows services authenticating
+
+LogonType 11 (Cached Interactive): Offline logins using cached credentials
+
+No LogonType 3 (Network) or LogonType 10 (RDP) events were observed.
+
+🔐 Security Interpretation
+
+The observed logon types indicate normal user and system behavior.
+The absence of network and RDP logons suggests:
+
+No lateral movement activity
+
+No remote access attempts
+
+No unauthorized external logins during the analysis period
+
+index=main EventID=4624 LogonType=7
+| table _time
+Monitored Windows Security Event ID 4624 (LogonType 7) to track workstation unlock events. This helps establish normal user behavior and confirms the absence of remote or unauthorized access activity.
+ 
   
