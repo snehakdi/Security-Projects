@@ -2,7 +2,7 @@
 Splunk portfolio using Windows system logs
 
 
- Overview
+ ## Overview
   This project demonstrates the ingestion, analysis, and visualization of my **Windows system logs** using **Splunk Enterprise**.  
   The goal of this portfolio is to showcase hands-on experience with **log ingestion, SPL querying, dashboards, and alerts**
 
@@ -10,7 +10,7 @@ Splunk portfolio using Windows system logs
 
 ---
 
- Objective
+ ## Objective
 - Ingest Windows System,Application and Security logs into Splunk
 - Monitor system health and application stability
 - Detect security-related events such as failed login attempts/error
@@ -19,7 +19,7 @@ Splunk portfolio using Windows system logs
 
 ---
 
- Data Sources & Ingestion
+ ## Data Sources & Ingestion
 Data Source:[ Windows Event Viewer ](https://github.com/snehakdi/splunk-windows-log-portfolio/blob/main/screenshots/event%20viewer.png) 
 - System Logs
 - Application Logs
@@ -30,7 +30,7 @@ Ingestion Method:
 
 ---
 
-SPL Queries Used
+## SPL Queries Used
 
 1)index =main (Displays all the events)   
 2)[index=main sourcetype="csv"](https://github.com/snehakdi/splunk-windows-log-portfolio/blob/main/screenshots/sourcetype.png) (displays all events whose sourcetype is csv) 
@@ -44,7 +44,7 @@ SPL Queries Used
    
 
 
-  LOGON BEHAVIOUR ANALYSIS USING SECURITY LOGS  
+ ## LOGON BEHAVIOUR ANALYSIS USING SECURITY LOGS  
   
 (i) [ index=main EventID=4624 | stats count by LogonType](https://github.com/snehakdi/splunk-windows-log-portfolio/blob/main/screenshots/Security.png)  
 
@@ -67,7 +67,7 @@ SPL Queries Used
    remote or unauthorized access activity.  
 
 
- ANALYSIS USING SYSTEM ANS APPLICATION LOGS  
+## ANALYSIS USING SYSTEM ANS APPLICATION LOGS  
  
 (i)[ index=main sourcetype=csv Level IN("Error","Warning","Information") | stats count by Level  ](https://github.com/snehakdi/splunk-windows-log-portfolio/blob/main/screenshots/Visual%20representation.png)  
 Analyzed Windows System logs in Splunk to categorize events by severity level (Error, Warning, Information). This query helps visualize system health, identify critical issues, and establish a baseline for normal system behavior.  
@@ -76,11 +76,11 @@ Analyzed Windows System logs in Splunk to categorize events by severity level (E
 Analyzed system logs in Splunk using keyword-based detection to identify failure, crash, and shutdown events.  
 
 
-ALERTS FOR MONITORING
+## ALERTS FOR MONITORING
 
 Configured a real-time Splunk alert for application crash events.Tried using email notifications but  email notifications are not supported in the free version, the alert triggers in the Splunk interface, and all actions, and configurations were tested successfully ([Alerts.png](https://github.com/snehakdi/splunk-windows-log-portfolio/blob/main/screenshots/email%20alerts.png) [email alerts.png](https://github.com/snehakdi/splunk-windows-log-portfolio/blob/main/screenshots/Alerts.png)). This demonstrates the ability to monitor and respond to critical application failures proactively.  
 
-CONCLUSION  
+## CONCLUSION  
 This project demonstrates hands-on experience with log ingestion, SPL querying, dashboards, and alerts in Splunk. It showcases the ability to monitor system health, analyze application behavior, and respond proactively to critical events, providing practical insights into both system and security monitoring.
 
 
