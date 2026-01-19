@@ -63,5 +63,12 @@ SPL Queries Used
  (ii) [index=main EventID=4624 LogonType=7| table _time](https://github.com/snehakdi/splunk-windows-log-portfolio/blob/main/screenshots/logontype.png)  
    Monitored Windows Security Event ID 4624 (LogonType 7) to track workstation unlock events. This helps establish normal user behavior and confirms the absence of 
    remote or unauthorized access activity.  
- 
+
+
+ ANALYSIS USING SYSTEM LOGS
+(i)[ index=main sourcetupe=csv Level IN("Error","Warning","Information") | stats count by Level  ](https://github.com/snehakdi/splunk-windows-log-portfolio/blob/main/screenshots/Visual%20representation.png)  
+Analyzed Windows System logs in Splunk to categorize events by severity level (Error, Warning, Information). This query helps visualize system health, identify critical issues, and establish a baseline for normal system behavior.  
+
+(ii)index=main sourcetype=csv Message="*fail*" OR Message="*crash*" OR Message="*shutdown*"  
+Analyzed system logs in Splunk using keyword-based detection to identify failure, crash, and shutdown events.
   
