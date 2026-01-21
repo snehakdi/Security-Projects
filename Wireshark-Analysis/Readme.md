@@ -24,7 +24,7 @@ Wireshark
 
 ## Key Findings  
 
-  Screenshot1.Png
+ [ Screenshot1.Png](https://github.com/snehakdi/SOC-Projects/blob/main/Wireshark-Analysis/Screenshots/screenshot1.png)
 
    - Identified UDP-based HTTPS traffic (port 443) indicating the use of QUIC / HTTP-3, commonly used by modern browsers and cloud services.
 
@@ -39,8 +39,8 @@ Wireshark
    - Traffic behavior was consistent with normal user and application activity.  
    
 
- Screenshot2.png
-
+[ Screenshot2.png
+](https://github.com/snehakdi/SOC-Projects/blob/main/Wireshark-Analysis/Screenshots/screenshot2.png)
   - Packets 50–52 (IPv6 TLS Session): Ongoing encrypted communication between a local host and a remote server, characterized by "Application Data" exchanges and 
    TCP Acknowledgments.
 
@@ -57,8 +57,8 @@ Wireshark
   
 
 
-Screenshot3.png
-
+[Screenshot3.png
+](https://github.com/snehakdi/SOC-Projects/blob/main/Wireshark-Analysis/Screenshots/screenshot3.png)
   - Packet 479, 485–486 (QUIC Traffic): High-speed, encrypted UDP-based traffic (QUIC) is observed between a local host and a remote server. The "Protected 
     Payload" indicates data transfer within an established session, typically used for low-latency web applications.
 
