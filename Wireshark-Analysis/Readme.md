@@ -15,9 +15,9 @@ Wireshark
 ---
 
 ## Protocols Observed
-  Secure Web & Application Traffic-TLSv1.2,QUIC  
-  Network Management-TCP,ARP,UDP,IGMPv2  
-  Discovery & Connectivity-SSDP,IPv6
+   - Secure Web & Application Traffic-TLSv1.2,QUIC  
+   - Network Management-TCP,ARP,UDP,IGMPv2  
+   - Discovery & Connectivity-SSDP,IPv6
 
  
 
